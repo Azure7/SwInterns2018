@@ -1,0 +1,38 @@
+<!-Created by Qiying Li.->
+
+<center>
+<header>
+<b>Hello world</b>
+</header>
+<p/>
+<input type="text" id="userInput"=> </input>
+<button onclick="find5()">Give me a string</button>
+
+<p>
+<b id="s1"></b>   
+<b id="s2" style="color:ff0000"></b> 
+<b id="s3"></b> 
+</p>
+</center>
+
+<script type="text/javascript">
+function find5(){
+    var userInput = document.getElementById("userInput").value;
+    var size = userInput.length;
+    var warning = "Your string has less than 5 characters.";
+    if(size<5) {
+    	document.getElementById("s1").innerHTML = warning;
+    	document.getElementById("s2").innerHTML = "";
+    	document.getElementById("s3").innerHTML = "";
+    }
+    else{
+    var pri = userInput.substring(0, 4);
+    var mid = userInput.substring(4, 5);
+    var aft = userInput.substring(5, size);
+    
+    document.getElementById("s1").innerHTML = pri;
+    document.getElementById("s2").innerHTML = mid;
+    document.getElementById("s3").innerHTML = aft;
+	}	
+}
+</script>
